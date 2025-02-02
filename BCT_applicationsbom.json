@@ -1,0 +1,43 @@
+{
+  "bomFormat": "ConcertDef",
+  "specVersion": "1.0.2",
+  "metadata": {
+    "timestamp": "2024-12-06T15:23:57Z",
+    "type": "application",
+    "component": {
+      "projectName": "bcttest1",
+      "version": "1.0"
+    },
+    "business": {
+      "name": "BCT"
+    }
+  },
+  "services": [
+    {
+      "bom-ref": "appapi:/test/flows/flow1.msgflow",
+      "name": "/test/flows/flow1.msgflow",
+      "endpoints": [
+        "/oursoapendpoint"
+      ],
+      "properties": [
+        {
+          "name": "network_exposure",
+          "value": "private"
+        }
+      ]
+    },
+    {
+      "bom-ref": "appapi:/test/flows/flow2.msgflow",
+      "name": "/test/flows/flow2.msgflow",
+      "endpoints": [
+        "http://somesite.com.au/oursoapendpoint"
+      ],
+      "properties": [
+        {
+          "name": "network_exposure",
+          "value": "public"
+        }
+      ]
+    }
+  ]
+}
